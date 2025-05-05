@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: med-patient
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/med_patient
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+    jpa:
+      hibernate:
+        ddl-auto: update      # автоматически создаёт/обновляет схему (можно заменить на validate, none и т.п.)
+      show-sql: true

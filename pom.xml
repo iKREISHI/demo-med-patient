@@ -26,8 +26,38 @@
 		<tag/>
 		<url/>
 	</scm>
+	<repositories>
+		<repository>
+			<id>ZK Evaluation Repository</id>
+			<url>http://mavensync.zkoss.org/eval</url>
+		</repository>
+		<repository>
+			<id>ZK Maven2 Repository</id>
+			<url>https://mavensync.zkoss.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>ZK CE</id>
+			<url>https://mavensync.zkoss.org/maven2</url>
+		</repository>
+
+	</repositories>
 	<properties>
+		<!--Common -->
 		<java.version>21</java.version>
+		<guava.version>32.1.1-jre</guava.version>
+		<tomcat-embed.version>9.0.80</tomcat-embed.version>
+		<postgresql.version>42.6.0</postgresql.version>
+		<!-- ZK -->
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<zk.version>9.6.5-jakarta</zk.version>
+		<zkspring.version>6.2.1</zkspring.version>
+		<spring.version>6.2.1</spring.version>
+		<springsecurity.version>6.4.2</springsecurity.version>
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<zats.version>4.0.0</zats.version>
+		<junit.version>4.13.1</junit.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -38,7 +68,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -60,6 +89,22 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+		</dependency>
+		<!-- zkspring -->
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkspring-core</artifactId>
+			<version>${zkspring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkspring-security</artifactId>
+			<version>${zkspring.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
